@@ -3,13 +3,19 @@ import Headerr from './Header';
 import Footer from './Footer';
 import MainBody from './Mainbody';
 import AddButton from './AddButton';
-import ClassComp from './classComp';
+// import ClassComp from './classComp';
 import Row from 'react-bootstrap/esm/Row';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
+import FormBody from './FormBody';
+import Hocchild from './hocchild'
+import HookComponent from './Components/HookComponent'
+import FunctionHooks from './Components/FunctionHooks'
+import HooksArray from './Components/HooksArray'
+
 
 function App() {
-  
+
   let seedtodo = [
     {
       title: "Finance",
@@ -25,22 +31,21 @@ function App() {
     }
   ]
   return (
+
     <div className="App">
-      <Headerr/>
-      <Container >
-       
-        <Row>
-          <Col><AddButton /></Col>
-        </Row>
-        <Row>
-          <Col><MainBody seedtodo={seedtodo} /></Col>
-        </Row>
-      </Container>
 
-      {/* <ClassComp /> */}
-      <Footer />
+      <HooksArray />
 
+      {/* <FunctionHooks/> */}
+      {/* <HookComponent/> */}
+
+      {/* <Headerr />
+      <AddButton />
+      <FormBody />  
+      <MainBody seedtodo={seedtodo} />
+      <Footer /> */}
     </div>
+
   );
 }
 

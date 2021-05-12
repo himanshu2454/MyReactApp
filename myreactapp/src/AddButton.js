@@ -22,15 +22,24 @@ class AddButton extends Component {
 
     render(){
 
+        const cssstyle = {
+            
+            float : "left",
+            backgroundColor : "red",
+            radius : "1px"
+        }
+
         return (
 
-            <div style = {{ float : "left"}}>
-            <Button variant="danger" onClick = { () => this.AddTodo() } >
-    
-                <BsFillPlusCircleFill />
-                <span>{' '}Add Todo</span>
-    
-            </Button>
+            <div >
+
+            <button className = "TodoButton" onClick = { () => this.AddTodo() } style = { cssstyle } > 
+
+                <BsFillPlusCircleFill />{' '}
+                <span>Add Todo</span>
+
+            </button>
+
             <span> Todo Count : { this.state.Count }</span>
         </div>
         );
